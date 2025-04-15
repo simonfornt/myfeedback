@@ -1,14 +1,17 @@
 
 import './App.css'
+import Nav from './components/Nav'
+import MenuItem from './components/MenuItem'
 
 function App() {
  
 
   return (
     <>
-      <h1 className='text-2xl text-center'> Start MyFeedback assignment</h1>
+      <Nav/>
+      <MenuItem/>
     </>
   )
 }
 
-export default App
+export default App;
