@@ -1,9 +1,11 @@
 import React from 'react';
 import CarouselReuse from '../resuseable/CarouselReuse';
+import CtaSection from '../components/CtaSection';
 
 function Home() {
   return (
-    <div className="px-4 py-8">
+   <>
+     <div className="px-4 py-8">
       <div className="md:max-w-screen-2xl mx-auto">
         <h2 className="text-xl mx-10 sm:text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
           The latest trends
@@ -30,6 +32,8 @@ function Home() {
         <button className='text-lg text-white bg-[#1677BD] py-3 px-8 rounded-full'>Show more</button>
       </div>
     </div>
+    <CtaSection/>
+   </>
   );
 }
 
