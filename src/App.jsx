@@ -5,6 +5,7 @@ import MenuItem from './components/MenuItem'
 import Carousel from './components/Carousel'
 import CarouselSection from './components/CarouselSection';
 import CarouselCard from './components/CarouselCard';
+import Home from './pages/Home';
 
 function App() {
  
@@ -14,7 +15,8 @@ function App() {
       <Nav/>
       <MenuItem/>
       <CarouselSection/>
-      <CarouselCard/>
+      
+      <Home/>
     </>
   )
 }
