@@ -42,7 +42,7 @@ function CarouselSection() {
   const slideWidth = 100 / cardsPerView;
 
   return (
-    <div className='w-full max-w-[90%] xl:max-w-[1345px] min-h-[400px] md:min-h-[509px] bg-[#1677BD] mx-auto py-6 md:py-10 my-6 md:my-10 rounded-xl md:rounded-2xl'>
+    <div className='w-full max-w-[90%] xl:max-w-[1345px] min-h-[400px] md:min-h-[509px] bg-[#1677BD] mx-auto py-10 md:py-10 my-6 md:my-20 rounded-xl md:rounded-2xl'>
       <div className='relative w-full max-w-[95%] md:max-w-[1238px] h-auto mx-auto px-4'>
         <h1 className='text-2xl md:text-3xl pb-6 md:pb-9 text-white text-center md:text-left'>
           Find the best restaurant ratings below

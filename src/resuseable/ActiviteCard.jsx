@@ -14,8 +14,8 @@ function ActiviteCard({
   return (
     <div className="bg-[#F8F8F8] w-full max-w-md p-6 rounded-lg shadow-sm">
       {/* Profile section */}
-      <div className="flex gap-3 items-start mb-4">
-        <img src={avatar} alt="Avatar" className="w-12 h-12 rounded-full" />
+      <div className="flex gap-3 items-center mb-4">
+        <img src={avatar} alt="Avatar" className="" />
         <div>
           <h4 className="text-xl font-bold text-gray-900">{name}</h4>
           <p className="text-sm text-gray-500">{location}</p>
@@ -42,13 +42,13 @@ function ActiviteCard({
             key={index}
             src={imgSrc}
             alt={`Image ${index + 1}`}
-            className="w-20 h-20 object-cover rounded-md"
+            className=" object-cover rounded-md"
           />
         ))}
       </div>
 
       {/* Link */}
-      <a href={linkHref} className="text-sm text-blue-600 underline">
+      <a href={linkHref} className="text-sm  underline">
         {linkText}
       </a>
     </div>

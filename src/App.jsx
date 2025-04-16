@@ -5,6 +5,7 @@ import MenuItem from './components/MenuItem'
 import CarouselSection from './components/CarouselSection';
 import Home from './pages/Home';
 import ActivitesSection from './components/ActivitesSection';
+import Footer from './components/Footer';
 
 function App() {
  
@@ -18,7 +19,9 @@ function App() {
       <Home/>
       <ActivitesSection/>
 
-      
+
+      <Footer/>
+
     </>
   )
 }
