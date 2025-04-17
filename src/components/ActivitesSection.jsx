@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import ActiviteCard from '../resuseable/ActiviteCard';
 
@@ -63,12 +63,27 @@ const data = [
     ],
     images: ['jojo1.png', 'jojo2.png', 'jojo3.png'],
   },
-  // Add more if needed
 ];
 
 function ActivitesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerView = 3;
+  const [cardsPerView, setCardsPerView] = useState(getCardsPerView());
+
+  function getCardsPerView() {
+    const width = window.innerWidth;
+    if (width < 640) return 1;
+    if (width < 1024) return 2;
+    return 3;
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCardsPerView(getCardsPerView());
+      setCurrentIndex(0); // Reset on resize
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const next = () => {
     setCurrentIndex((prev) =>
@@ -76,35 +91,32 @@ function ActivitesSection() {
     );
   };
 
-  // const prev = () => {
-  //   setCurrentIndex((prev) => (prev - cardsPerView >= 0 ? prev - cardsPerView : 0));
-  // };
-
-  // Adjust number of visible cards for responsiveness
-  const getCardsPerView = () => {
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth < 640) return 1;
-      if (window.innerWidth < 1024) return 2;
-    }
-    return 3;
+  const prev = () => {
+    setCurrentIndex((prev) => (prev - cardsPerView >= 0 ? prev - cardsPerView : 0));
   };
 
   return (
     <div className="w-full mb-20 px-4 md:px-10">
-      <h4 className="text-2xl font-bold font-lexend py-8 pl-2 font">Recent Activities</h4>
+      <h4 className="text-2xl font-bold font-lexend py-8 pl-2">Recent Activities</h4>
 
       <div className="relative">
-        {/* Navigation buttons */}
-        {/* <button
+        {/* Prev Button */}
+        <button
           onClick={prev}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md"
         >
           <ChevronLeftIcon className="w-6 h-6 text-gray-700" />
-        </button> */}
+        </button>
 
+        {/* Cards */}
         <div className="flex overflow-hidden">
-          <div className="flex gap-6 transition-transform duration-300 ease-in-out"
-               style={{ transform: `translateX(-${(100 / cardsPerView) * currentIndex}%)`, width: `${(100 / cardsPerView) * data.length}%` }}>
+          <div
+            className="flex gap-6 transition-transform duration-300 ease-in-out"
+            style={{
+              transform: `translateX(-${(100 / cardsPerView) * currentIndex}%)`,
+              width: `${(100 / cardsPerView) * data.length}%`,
+            }}
+          >
             {data.map((item, idx) => (
               <div
                 key={idx}
@@ -116,6 +128,7 @@ function ActivitesSection() {
           </div>
         </div>
 
+        {/* Next Button */}
         <button
           onClick={next}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md"
