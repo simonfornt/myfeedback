@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 // Pages
 import Home from './pages/Home';
 import Restaurants from './pages/Restaurants';
+import Betila from './Betila/Betila';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/restaurants" element={<Restaurants />} />
+        <Route path='/betila' element={<Betila/>}/>
         {/* Add more routes as needed */}
       </Routes>
 
