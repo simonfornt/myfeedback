@@ -1,12 +1,13 @@
 import React from 'react'
 import HeroBetila from '../Betilacomponent/HeroBetila';
-import BetilaImg from '../Betilacomponent/BetilaImg';
+import BetilaGallary from '../Betilacomponent/BetilaGallary';
 
 
 function Betila() {
   return (
     <>
         <HeroBetila/>
+        <BetilaGallary/>
         
     </>
   )
