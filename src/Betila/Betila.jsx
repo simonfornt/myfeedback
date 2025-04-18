@@ -1,9 +1,11 @@
 import React from 'react'
-import Restaurants from './../pages/Restaurants';
+import HeroBetila from '../Betilacomponent/HeroBetila';
 
 function Betila() {
   return (
-    <div> Welcome to Restaurants Betila</div>
+    <>
+        <HeroBetila/>
+    </>
   )
 }
 
