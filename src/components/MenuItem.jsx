@@ -23,11 +23,11 @@ const categories = [
   { name: 'Shopping', icon: ShoppingBag, path: '' },
   { name: 'Car location', icon: CarFront, path: '' },
   { name: 'Beauty & Spa', icon: Brush, path: '' },
-  { name: 'Park', icon: TreePalm, path: '/park' },
-  { name: 'Museum', icon: Theater, path: '/museum' },
-  { name: 'Car wash', icon: ShowerHead, path: '/car-wash' },
-  { name: 'Bars', icon: Wine, path: '/bars' },
-  { name: 'Gyms', icon: Dumbbell, path: '/gyms' },
+  { name: 'Park', icon: TreePalm, path: '' },
+  { name: 'Museum', icon: Theater, path: '' },
+  { name: 'Car wash', icon: ShowerHead, path: '' },
+  { name: 'Bars', icon: Wine, path: '' },
+  { name: 'Gyms', icon: Dumbbell, path: '' },
 ];
 
 function MenuItem() {
