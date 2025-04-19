@@ -2,6 +2,8 @@ import React from 'react'
 import HeroBetila from '../Betilacomponent/HeroBetila';
 import BetilaGallary from '../Betilacomponent/BetilaGallary';
 import BetilaInfo from '../Betilacomponent/BetilaInfo';
+import Ratting from '../Betilacomponent/Ratting';
+import ReviewSection from '../Betilacomponent/ReviewSection';
 
 
 function Betila() {
@@ -10,6 +12,8 @@ function Betila() {
         <HeroBetila/>
         <BetilaGallary/>
         <BetilaInfo/>
+        <Ratting/>
+        <ReviewSection/>
         
     </>
   )
