@@ -4,6 +4,7 @@ import BetilaGallary from '../Betilacomponent/BetilaGallary';
 import BetilaInfo from '../Betilacomponent/BetilaInfo';
 import Ratting from '../Betilacomponent/Ratting';
 import ReviewSection from '../Betilacomponent/ReviewSection';
+import Discover from '../Betilacomponent/Discover';
 
 
 function Betila() {
@@ -14,6 +15,7 @@ function Betila() {
         <BetilaInfo/>
         <Ratting/>
         <ReviewSection/>
+        <Discover/>
         
     </>
   )
