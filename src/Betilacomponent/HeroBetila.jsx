@@ -5,7 +5,7 @@ import { MapPin, Clock } from 'lucide-react';
 function HeroBetila() {
   return (
     <>
-      <div className='bg-[url(betila-heroimg.png)] h-[500px] w-full bg-cover bg-no-repeat mb-20 relative'>
+      <div className='bg-[url("/betila-heroimg.png")] h-[500px] w-full bg-cover bg-no-repeat mb-20 relative'>
 
         {/* Centered text-content */}
         <div className='w-full md:w-[552px] h-full bg-linear-to-l  from-transparent to-black/70'>
